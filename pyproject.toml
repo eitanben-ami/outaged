@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "outaged"
+version = "0.1.0"
+description = "Parse structured outage logs and summarize them."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+outaged = "outaged:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["outaged*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
