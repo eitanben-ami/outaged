@@ -10,15 +10,6 @@ Parse structured outage logs, summarize them, and export to table or JSON.
 
 It computes durations, summarizes statistics, filters by service or duration, and outputs either a formatted table or machine-readable JSON.
 
-## Features
-
-- Parse structured outage logs into typed records.
-- Validate and reject malformed lines with clear errors.
-- Filter by service name, minimum duration, or start time.
-- Summarize total outages, affected services, total and average duration.
-- Emit aligned table output or JSON.
-- Small stdlib-only implementation with no external dependencies.
-
 ## Installation
 
 ```bash
@@ -46,15 +37,11 @@ outaged -f outages.log --since 2025-01-02T00:00:00Z
 
 ```
 .
-├── outaged/
-│   ├── __init__.py
-│   └── cli.py
+├── outaged.py
 ├── tests/
 │   └── test_outaged.py
 ├── pyproject.toml
 └── README.md
 ```
 
-## Tags / keywords
-
-outage-log, log-parser, cli, python, json, monitoring
+Source: https://github.com/eitanben-ami/outaged
