@@ -4,7 +4,7 @@ import json
 import os
 import sys
 import tempfile
-from pathlib import Path
+from typing import List
 
 import pytest
 
@@ -14,8 +14,6 @@ from outaged import OutagedError, OutageRecord, filter_records, format_json, for
 
 
 def load_records_from_text(text: str) -> "List[OutageRecord]":
-    import tempfile
-
     handle = tempfile.NamedTemporaryFile("w+", suffix=".log", delete=False, encoding="utf-8")
     try:
         handle.write(text)
